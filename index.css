@@ -1,21 +1,35 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #ecf0f1;
+    --text-color: #333;
+    --header-footer-bg: #2c3e50;
+    --header-footer-text: white;
+    --link-color: rgb(0, 30, 255);
+    --link-hover-bg: #017ffe;
+    --box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition-time: 0.3s;
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #2c3e50;
-    color: #333;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #2c3e50;
-    color: white;
+    background-color: var(--header-footer-bg);
+    color: var(--header-footer-text);
     text-align: center;
     padding: 20px 0;
     font-size: 1.5rem;
 }
 
 nav {
-    background-color: #2c3e50;
+    background-color: var(--header-footer-bg);
     padding: 10px 0;
     text-align: center;
 }
@@ -34,15 +48,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(0, 30, 255);
+    color: var(--link-color);
     text-decoration: none;
     font-size: 1.2rem;
     padding: 10px 15px;
-    transition: background 0.3s;
+    transition: background var(--transition-time);
 }
 
 nav ul li a:hover {
-    background: #017ffe;
+    background: var(--link-hover-bg);
     border-radius: 5px;
 }
 
@@ -51,9 +65,9 @@ section {
     margin: 20px auto;
     padding: 20px;
     background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-time) ease-in-out;
 }
 
 section:hover {
@@ -61,8 +75,8 @@ section:hover {
 }
 
 h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #2c3e50;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 5px;
     margin-bottom: 15px;
 }
@@ -73,11 +87,11 @@ ul {
 }
 
 li {
-    background: #ecf0f1;
+    background: var(--background-color);
     margin: 5px 0;
     padding: 10px;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background var(--transition-time);
 }
 
 li:hover {
@@ -87,14 +101,14 @@ li:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #2c3e50;
-    color: white;
+    background-color: var(--header-footer-bg);
+    color: var(--header-footer-text);
     margin-top: 20px;
     font-size: 1.2rem;
 }
 
 a {
-    color: #3498db;
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: bold;
 }
@@ -103,7 +117,7 @@ a:hover {
     text-decoration: underline;
 }
 
-
+/* Responsividade */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column; 
